@@ -35,8 +35,9 @@ ts.ui.ready(function () {
         ts.ui.get('#board-' + id, function (board) {
             board.buttons([
                 {
-                    label: 'More', onclick() {
-                        ts.ui.get('#aside-' + id, aside => {
+                    label: 'More', 
+                    onclick: function() {
+                        ts.ui.get('#aside-' + id, function(aside) {
                             aside.open();
                         });
                     }
