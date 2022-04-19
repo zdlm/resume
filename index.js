@@ -23,7 +23,7 @@ ts.ui.ready(function () {
     }
 
     var initBoards = function () {
-        var companies = ['tradeshift', 'wangli', 'cloump', 'cicc'];
+        var companies = ['zeronorth', 'maersktankers', 'tradeshift', 'wangli', 'cloump', 'cicc'];
         companies.forEach(function (id) {
             initAside(id);
         });
@@ -35,9 +35,9 @@ ts.ui.ready(function () {
         ts.ui.get('#board-' + id, function (board) {
             board.buttons([
                 {
-                    label: 'More', 
-                    onclick: function() {
-                        ts.ui.get('#aside-' + id, function(aside) {
+                    label: 'More',
+                    onclick: function () {
+                        ts.ui.get('#aside-' + id, function (aside) {
                             aside.open();
                         });
                     }
@@ -50,7 +50,7 @@ ts.ui.ready(function () {
         initBoards();
     };
     init();
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         var hash = window.location.hash;
         ts.ui.Header.tabs().selectedIndex = tabs.indexOf(hash.substring(1, hash.length));
     });
